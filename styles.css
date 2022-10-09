@@ -1,0 +1,225 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/* body {
+    background-image: ;
+} */
+header {
+    display: flex;
+    min-height: 60px;
+    padding: 10px;
+    /* background-color: rgb(188, 122, 7); */
+    background-image: linear-gradient(orange, rgba(63, 59, 59, 0.249));
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+nav {
+    margin: 1em;
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    /* para que se pueda hacer click en cualquier parte del contenedor del link para acceder a el*/
+    color: black;
+    margin: 1em;
+
+}
+a:hover {
+    color: rgba(240, 229, 226, 0.465);
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+/*@media (max-width:700px){
+    header {
+        flex-direction: column;
+    }
+    nav {
+        padding: 10px 0px;
+    
+    color: rgb(14, 6, 6);
+}*/
+
+/*GALERIA*/
+h2 {
+    color: black;
+    text-shadow: 1px 2px 2px black, 0 0 25px rgb(188, 122, 7), 0 0 5px;
+    text-align:left;
+}
+div.galeria {
+    margin:auto;
+    box-shadow: 0 4px 8px 0 rgb(172, 164, 164), 0 6px 20px 0 rgb(139, 134, 134);
+    width: 236px;
+    display: inline-block;
+    margin-top: 25px;
+}
+div.galeria img {
+    width: 236px;
+    height: 236px;
+}
+div.galeria:hover {
+    border: 1px solid rgb(234, 169, 19);
+    transform: rotate(-3deg);
+}
+div.pie {
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(117, 115, 110);
+    padding: 30px;
+}
+.sub {
+    font-family: Century;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.elementos {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+.sub-parrafo {
+    text-align: right;
+    margin: 10px;
+    height: 10%;
+} 
+.nosotros {
+    text-align: left;
+    width: 40%;
+}
+.centrado {
+    display: flex;
+    align-content: center;
+}
+/* main {
+    background-color: rgba(225, 211, 211, 0.354);
+    background-image: url(imagenes/Warqi.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+} */
+.footer {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 5px;
+    /* background-color: rgb(188, 122, 7); */
+    background-image: linear-gradient(rgba(63, 59, 59, 0.249), orange);
+    }
+.item {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+}
+/*span {
+    margin: 1em
+}*/
+/*.contenedor-grande {
+}*/
+.carrousel {
+    /*background-color: rgb(255, 255, 255);*/
+    display: flex;
+    max-width: 100%;
+    height: 490px;
+    overflow-x: scroll;
+}
+.slider {
+    margin-top: 10px;
+    padding: 10px;
+}
+.form {
+    width: 450px;
+    margin: auto;
+    background-color:rgba(188, 122, 7, 0.508);
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.form-head {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton {
+    background-color: rgba(65, 61, 61, 0.629);
+    color: aliceblue;
+    padding: 10px;
+}
+#boton:hover {
+    cursor: pointer;
+}
+/*@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}*/
+/*GALERIA*/
+section {
+    box-sizing: border-box;
+
+}
+#titulo {
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+.linea {
+  background-color: black; 
+  height: 5px;
+  width: 100%;
+  display: block;
+}
+.galery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.galery img {
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.galery >a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgb(0, 0, 0, .5);
+}
+.galery a:hover img {
+    filter: blur(1px);
+    transform: rotate(5deg) scale(1.3);
+}
