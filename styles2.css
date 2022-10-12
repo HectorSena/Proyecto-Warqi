@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html /* PARAR QUE EL CONTENIDO OCUPE EL 100% DE ALTURA */
+{
+    height: 100%;
+}
+body {
+    font-family: "Public Sans" , sans-serif;
+    /* font-size: 1.2rem; */
+    min-height: 100%;
+    /* background-color: rgb(242, 212, 135); */
+    
+}
+/* +++++++++++GRID AREAS++++++++++ */
+.header {
+    margin: 5px;
+    grid-area: header;
+    /* background-color: rgba(195, 189, 189, 0.814); */
+    background-image: url(bannerplano.svg);
+    font-family: 'Old Standard TT', serif;
+    background-size: cover;
+    background-position: initial;
+}
+.nav-links {
+    margin: 5px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-area: nav-links;
+    /* background-color: rgb(48, 45, 45); */
+    background-image: linear-gradient(rgb(196, 155, 79), rgba(173, 166, 166, 0.946));
+}
+a {
+    color: black;
+    margin: 1em;
+    font-size: 18;
+    text-decoration: none;
+    text-transform: initial;
+    
+    
+}
+a:hover {
+    color: beige;
+    cursor: pointer;
+}
+
+.main {
+    margin: 10px;
+    grid-area: main;
+    background-color: rgba(223, 201, 201, 0.156);
+    font-family: 'Old Standard TT', serif;
+    background-image: url(imagenes/Warqi.png);
+    background-position: center;
+    background-size: 80px;
+    background-repeat: space;
+
+
+}
+.linea {
+background-color: rgb(4, 4, 4);
+height: 3px;
+width: 100%;
+display: block;
+margin-bottom: 1em;
+}
+
+.footer {
+    margin: 5px;
+    grid-area: footer;
+    /* background-color: rgba(28, 25, 25, 0.973); */
+    background-image: url(banner-header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: grid;
+    grid-template-areas: 
+    "item1 item2 item3";
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid-container > * /* Estilos agregados a los contenedores descendientes */
+{
+    box-shadow: -1px 1px  7px 0px rgba(0, 0, 0, 0.715);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header" 100% 100%
+    "nav-links" 40px
+    "main" 
+    "footer" 10px
+    ;
+}
+
+/*PODEMOS CAMBIAR EL ORDEN DE COMO SE VERIAN LOS CONTENEDORES EN DIFERENTES TAMAÑOS DE VISTA DEL DISPOSITO*/
+/* CON MIN-WIDTH PODEMOS MODIFICAR LA VISTA PARA DIFERENTES DISPOSITIVOS */
+@media (min-width: 360px) {
+    .grid-container {
+        /* PARA AGREGAR EL ANCHO SE PONE PRIMERO EL ALTO /200PX>(EJEMPLO) 
+        SI QUEREMOS QUE ALGUNA COLUMNA QUEDE VACIA SE AGRAGA UN PUNTO (.)*/
+        grid-template:
+        "header" 60px
+        "nav-links" 60px
+        "main" auto
+        "footer" 120px
+        ;
+    }
+}
+
+/* ++++++++++GALERIA++++++++++++ */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+    grid-auto-flow: dense;
+}
+
+.galeria img {
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-radius: 6px;
+}
+
+.galeria>a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgb(0, 0, 0, .5);
+}
+.grid-item:hover {
+    filter: blur(1px);
+    transform: rotate(2deg) scale(0.9);
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
