@@ -170,8 +170,8 @@ margin-bottom: 1em;
 }
 .imagenes-carrusel {
     height: 100%;
-
 }
+
 .flechas-carrusel {
     height: 100%;
     width: 100%;
@@ -184,7 +184,8 @@ margin-bottom: 1em;
 }
 .imagenes-carrusel-A {
     background-image: url(imagenes/imagenes-galeria/trece.svg);
-    background-size: 100%;
+    background-size: cover ;
+    background-position: center center;
     background-repeat: no-repeat;
     color: rgb(255, 191, 0);
     
