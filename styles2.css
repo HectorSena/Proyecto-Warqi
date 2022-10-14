@@ -54,13 +54,14 @@ a:hover {
     font-family: 'Old Standard TT', serif;
     background-image: url(imagenes/Warqi.png);
     background-position: center;
-    background-size: 80px;
+    background-size: 60px;
     background-repeat: space;
-
-
+}
+#titulo {
+    background-image: linear-gradient(rgb(196, 155, 79), rgba(173, 166, 166, 0.946));
 }
 .linea {
-background-color: rgb(4, 4, 4);
+background-color: rgb(161, 149, 130);
 height: 3px;
 width: 100%;
 display: block;
@@ -124,7 +125,7 @@ margin-bottom: 1em;
     width: 95%;
     margin: auto;
     grid-gap: 10px;
-    padding: 40px 0;
+    padding: 15px 0;
     overflow: hidden;
     grid-auto-flow: dense;
 }
@@ -155,4 +156,47 @@ margin-bottom: 1em;
 
 .tall {
     grid-row: span 2;
+}
+/* CARRUSEL */
+#cont-items-carrusel {
+    height: 450px;
+    overflow: hidden;
+}
+.item-carrusel {
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 100%;
+    position: relative;
+}
+.imagenes-carrusel {
+    height: 100%;
+
+}
+.flechas-carrusel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding: 20px;
+}
+.imagenes-carrusel-A {
+    background-image: url(imagenes/imagenes-galeria/trece.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: rgb(255, 191, 0);
+    object-fit: cover;
+    
+}
+.imagenes-carrusel-B {
+    background-image: url(imagenes/imagenes-galeria/catorce.svg);
+    background-size: cover;
+    color: rgb(255, 191, 0);
+}
+.imagenes-carrusel-C {
+    background-image: url(imagenes/imagenes-galeria/quince.svg);
+        background-size: cover;
+        color: rgb(255, 191, 0);
 }
